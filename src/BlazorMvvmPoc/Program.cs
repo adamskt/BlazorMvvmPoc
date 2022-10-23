@@ -1,4 +1,5 @@
 using BlazorMvvmPoc;
+using BlazorMvvmPoc.ViewModels.Pages;
 using BlazorMvvmPoc.ViewModels.Shared;
 using Microsoft.AspNetCore.Components.Web;
 using Microsoft.AspNetCore.Components.WebAssembly.Hosting;
@@ -11,5 +12,7 @@ builder.Services.AddScoped(sp => new HttpClient { BaseAddress = new Uri(builder.
 
 // ViewModels
 builder.Services.AddTransient<NavMenuViewModel>();
+builder.Services.AddTransient<CounterViewModel>();
+
 
 await builder.Build().RunAsync();
